@@ -1,0 +1,77 @@
+<div class="container">
+
+    <div class="sidebar" *ngFor="let user of users$">
+
+        <img src='{{user.profile.image}}'>
+        <h1 id="name">{{user.profile.name}}</h1>
+        <h4 id="profession">{{user.profile.profession}}</h4>
+        <hr id="first-hr">
+
+        <h3>Profile</h3>
+        <hr id="title-hr">
+
+        <p>{{user.profile.description}}</p>
+
+        <h3>contact</h3>
+        <hr id="title-hr">
+
+        <p>{{user.profile.contact.tel}} <br> {{user.profile.contact.cel}}</p><br>
+        <p>{{user.profile.contact.address}}</p><br>
+        <p>{{user.profile.contact.website}} <br> {{user.profile.contact.mail}}</p>
+        <br>
+
+        <h3>skills</h3>
+        <hr id="title-hr">
+
+        <p id="title">{{user.profile.skills[0].name}}</p>
+        <div class="progressBar" style="border: solid 1px #fff;">
+            <div id="progress-1"></div>
+        </div>
+
+        <p id="title">{{user.profile.skills[1].name}}</p>
+        <div class="progressBar" style="border: solid 1px #fff;">
+            <div id="progress-2"></div>
+        </div>
+
+        <p id="title">{{user.profile.skills[2].name}}</p>
+        <div class="progressBar" style="border: solid 1px #fff; margin-bottom: 2rem;">
+            <div id="progress-3"></div>
+        </div>
+
+
+    </div>
+
+
+    <div class="content" *ngFor="let user of users$">
+
+        <h1>work experience</h1>
+        <hr>
+        <h2>{{user.profile.experience[0].name}}</h2>
+        <p>{{user.profile.experience[0].date}}</p>
+        <p>{{user.profile.experience[0].description}}</p>
+
+        <h2>{{user.profile.experience[1].name}}</h2>
+        <p>{{user.profile.experience[1].date}}</p>
+        <p>{{user.profile.experience[1].description}}</p>
+
+        <h2>{{user.profile.experience[2].name}}</h2>
+        <p>{{user.profile.experience[2].date}}</p>
+        <p>{{user.profile.experience[2].description}}</p>
+
+        <h1>education</h1>
+        <hr>
+        <h2>{{user.profile.education[0].name}}</h2>
+        <p>{{user.profile.education[0].date}}</p>
+        <p>{{user.profile.education[0].description}}</p>
+
+        <h2>{{user.profile.education[1].name}}</h2>
+        <p>{{user.profile.education[1].date}}</p>
+        <p>{{user.profile.education[1].description}}</p>
+
+        <h2>{{user.profile.education[2].name}}</h2>
+        <p>{{user.profile.education[2].date}}</p>
+        <p>{{user.profile.education[2].description}}</p>
+
+    </div>
+
+</div>
